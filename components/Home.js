@@ -12,7 +12,7 @@ function Home() {
   const [moviesData, setMoviesData] = useState([]);
 
   useEffect(() => {
-    fetch('https://mymoviz-backend-navy.vercel.app/movies').then(r => r.json()).then(data => { setMoviesData(data.results) })
+    fetch('https://mymoviz-backend-9c8wiwasd-mistpandoras-projects.vercel.app/movies').then(r => r.json()).then(data => { setMoviesData(data.results) })
   }, [])
 
 
