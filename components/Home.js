@@ -6,12 +6,15 @@ import Movie from './Movie';
 import 'antd/dist/antd.css';
 import styles from '../styles/Home.module.css';
 
+const apiKey = process.env.API_KEY
+
+
 function Home() {
   const [likedMovies, setLikedMovies] = useState([]);
   const [moviesData, setMoviesData] = useState([]);
 
   useEffect(() => {
-    fetch('https://mymoviz-backend-navy.vercel.app/movies').then(r => r.json()).then(data => { setMoviesData(data.results) })
+    fetch(`https://mymoviz-backend-coral-theta.vercel.app/movies?api_key=${apiKey}`).then(r => r.json()).then(data => { setMoviesData(data.results) })
   }, [])
 
 
